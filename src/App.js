@@ -3,14 +3,14 @@ import "./App.css";
 import { useState, useEffect } from "react";
 import About from "./components/About";
 import Navbar from "./components/Navbar";
-import TextForm from "./components/TextForm/TextForm";
+import TextForm from "./components/TextForm";
 import toastr from "toastr";
 import { Routes, Route, Outlet } from "react-router-dom";
 import ReactGA from 'react-ga4';
 
-//const TRACKING_ID = " <GA TRACKING ID> "; 
+const TRACKING_ID = "G-96TY3KHB8B"; // OUR_TRACKING_ID
 
-//ReactGA.initialize(TRACKING_ID);
+ReactGA.initialize(TRACKING_ID);
 
 function App() {
   let [Mode, setMode] = useState("light");
@@ -52,9 +52,9 @@ function App() {
     }
   }, [alert]);
 
-  /* useEffect(() => {
+  useEffect(() => {
     ReactGA.send({ hitType: "pageview", page: window.location.pathname + window.location.search});
-  }, []); */
+  }, []);
 
   return (
     <>
@@ -64,7 +64,7 @@ function App() {
           element={
             <div data-bs-theme={Mode}>
               <Navbar
-                title="Text Utils"
+                title="Prowordcounterai"
                 aboutText="About Us"
                 mode={Mode}
                 revMode={reverseMode}
@@ -87,7 +87,7 @@ function App() {
             element={
               <TextForm
                 showAlert={showAlert}
-                heading="Add some text to analyse"
+                heading="Try Prowordcounterai - Word Counter, Character Counter, Remove Extra Spaces"
                 revMode={reverseMode}
               />
             }

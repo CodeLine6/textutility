@@ -14,17 +14,6 @@ export default function Navbar(props) {
         <NavLink className="navbar-brand" to="/">
           {props.title}
         </NavLink>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
@@ -38,7 +27,8 @@ export default function Navbar(props) {
               </NavLink>
             </li>
           </ul>
-          <div className="color-picker d-flex align-items-center justify-content-center">
+        </div>
+        <div className="color-picker d-flex align-items-center justify-content-center">
             <span
               className="border border-light rounded-circle"
               style={{
@@ -63,9 +53,7 @@ export default function Navbar(props) {
               onChange={handleColorChange}
             />
           </div>
-          <div className="dark-mode-toggle">
-            
-
+        <div className="dark-mode-toggle">
             <label id="theme-toggle-button">
             <input
               style={{ cursor: "pointer",float:"left",marginLeft:"-1.5em" }}
@@ -265,7 +253,17 @@ export default function Navbar(props) {
               </svg>
             </label>
           </div>
-        </div>
+          <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
       </div>
     </nav>
   );
