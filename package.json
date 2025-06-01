@@ -34,10 +34,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "npm run build:server && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build:server": "webpack --config webpack.server.js",
+    "build:server": "webpack --config webpack.server.js --output-path netlify/functions",
     "start:server": "node prod/server.js",
     "build:client": "npm run build"
   },

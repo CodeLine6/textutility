@@ -8,8 +8,9 @@ module.exports = {
   externals: [nodeExternals()],
   entry: './server/index.js',
   output: {
-    filename: 'server.js',
-    path: path.resolve(__dirname, 'prod'),
+    filename: 'render.js',
+    path: path.resolve(__dirname, 'netlify/functions'),
+    libraryTarget: 'commonjs2'
   },
   module: {
     rules: [
