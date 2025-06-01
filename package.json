@@ -34,7 +34,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "npx cross-env CI=false npm run build:server && react-scripts build",
+    "build": "npm run build:server && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build:server": "webpack --config webpack.server.js --output-path netlify/functions",
